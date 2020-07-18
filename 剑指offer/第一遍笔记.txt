@@ -1,0 +1,25 @@
+声明该类型的实例
+调用构造函数和析构函数只需要知道函数的地址即可
+虚函数生成虚函数表，每一个实例中添加一个指向虚函数表的指针。（虚函数的调用机制）
+class CMyString
+{
+public:
+	CMyString(char* pData = NULL);
+	CMyString(const CMyString& str);
+	~CMyString(void);
+
+private:
+	char* m_pData;
+};
+operater c++中的关键字_重载操作符
+CMyString& CMyString::operater =(const CMyString& str)
+{
+	if(this == &str)
+		return *this;
+
+	delete []m_pData;
+	m_pDatam = NULL;
+	m_pDatam = new char[strlen(str.m_pDatam) + 1];
+	strcpy(m_pDatam, str.m_pDatam
+
+}
